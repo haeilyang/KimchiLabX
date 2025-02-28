@@ -1,7 +1,15 @@
-const { defineConfig } = require('@vue/cli-service')
+const { defineConfig } = require('@vue/cli-service');
+
 module.exports = defineConfig({
   transpileDependencies: true,
   pluginOptions: {
-    dotenv: true // `.env` 파일을 로드하도록 설정
+    dotenv: true
+  },
+  configureWebpack: {
+    plugins: [
+      new (require('webpack')).DefinePlugin({
+        'process.env.VUE_APP_OPENAI_API_KEY': JSON.stringify(process.env.VUE_APP_OPENAI_API_KEY)
+      })
+    ]
   }
-})
+});
