@@ -1,6 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
-module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "/KimchiLabX/" : "/",
-};
-
-
+module.exports = defineConfig({
+  transpileDependencies: true,
+  pluginOptions: {
+    dotenv: true // `.env` 파일을 로드하도록 설정
+  }
+})

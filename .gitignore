@@ -1,8 +1,7 @@
 .DS_Store
 node_modules
 /dist
-.env
-
+.env  # ✅ 따옴표 제거
 
 # local env files
 .env.local
@@ -22,6 +21,3 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
-".env" 
-".env" 
-".env" 
