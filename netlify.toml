@@ -1,2 +1,4 @@
 [build]
+  command = "npm install && npm run build"
   functions = "netlify/functions"
+  publish = "docs"  # Netlify가 배포할 폴더 (Vue의 기본 빌드 폴더)
